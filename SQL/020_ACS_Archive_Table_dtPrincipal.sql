@@ -1,0 +1,19 @@
+﻿USE [ACS_Archive]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[dtPrincipal](
+	[Id] [int] NOT NULL,
+	[PartitionId] [nchar](36) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[strSid] [nvarchar](180) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[strUser] [nvarchar](256) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[strDomain] [nvarchar](256) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+ CONSTRAINT [pkPrincipal] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC,
+	[PartitionId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
